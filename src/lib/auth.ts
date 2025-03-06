@@ -16,7 +16,7 @@ export async function loginUser(formData: FormData) {
 
   try {
     //post response from the tol_server
-    const res = await fetch("http://localhost:3001/auth/login", {
+    const res = await fetch("http://localhost:5000/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -51,7 +51,7 @@ export async function signupUser(formData: FormData) {
 
   try {
     //send data to server
-    const res = await fetch("http://localhost:3001/auth/signup", {
+    const res = await fetch("http://localhost:5000/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, username }),

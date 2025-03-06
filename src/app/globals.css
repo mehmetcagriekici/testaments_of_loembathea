@@ -1,24 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&family=EB+Garamond:wght@400;700&family=Lora:wght@400;600&family=Cormorant+Garamond:wght@400;700&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Space+Grotesk:wght@400;700&family=Spectral:wght@400;700&display=swap");
+
 @import "tailwindcss";
 
+@utility items-safe-center {
+  align-items: safe center;
+}
+
+@utility justify-safe-center {
+  justify-content: safe center;
+}
+
+/*Font Families*/
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-playfair: "Playfair Display", serif;
 }
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-inter: "Inter", sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-garamond: "EB Garamond", serif;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --font-lora: "Lora", serif;
+}
+@theme {
+  --font-cormorant: "Cormorant Garamond", serif;
+}
+@theme {
+  --font-merriweather: "Merriweather", serif;
+}
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+}
+@theme {
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+@theme {
+  --font-spectral: "Spectral", serif;
 }
