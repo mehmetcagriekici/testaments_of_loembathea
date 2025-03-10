@@ -3,7 +3,6 @@
 
 //imports
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 
 /**
  * login user to the server
@@ -51,7 +50,7 @@ export async function signupUser(formData: FormData) {
 
   try {
     //send data to server
-    const res = await fetch("http://localhost:5000/auth/signup", {
+    const res = await fetch("http://localhost:5000/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, username }),
@@ -63,8 +62,14 @@ export async function signupUser(formData: FormData) {
       return { error: errorData.message || "Signup Failed. Try again." };
     }
 
-    //redirect user to the login page
-    redirect("/auth/login");
+    const data = await res.json();
+
+    //set token
+    const cookieStore = await cookies();
+    cookieStore.set("token", data.token, { httpOnly: true, secure: true });
+
+    //return success
+    return { success: true };
   } catch {
     return {
       error: "An unexpected error occured during signup. Please try again.",
@@ -78,6 +83,4 @@ export async function signupUser(formData: FormData) {
 export async function logoutUser() {
   //clear cookies
   (await cookies()).delete("token");
-  //redirect to login page
-  redirect("/auth/login");
 }

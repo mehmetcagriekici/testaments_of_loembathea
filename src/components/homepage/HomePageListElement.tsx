@@ -1,3 +1,6 @@
+//imports
+import * as motion from "motion/react-client";
+
 /**
  * Presentational component for the li elements on home page
  * custom styling
@@ -17,6 +20,7 @@ export default function Li({
   listHeadingStyles = "",
   listSpanStyles = "",
   listParagraphStyles = "",
+  delay,
 }: {
   heading: string;
   span: string;
@@ -25,15 +29,20 @@ export default function Li({
   listHeadingStyles?: string;
   listSpanStyles?: string;
   listParagraphStyles?: string;
+  delay: number;
 }) {
   return (
-    <li
+    <motion.li
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 1 }}
+      transition={{ duration: 0.3, delay }}
       className={`w-full flex flex-col items-center justify-center ${listElementStyles}`}
     >
       <h5 className={`font-black ${listHeadingStyles}`}>
         {heading} - <span className={`${listSpanStyles}`}>{span}</span>
       </h5>
       <p className={`leading-relaxed ${listParagraphStyles}`}>{text}</p>
-    </li>
+    </motion.li>
   );
 }

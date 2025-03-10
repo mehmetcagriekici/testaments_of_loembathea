@@ -54,10 +54,12 @@ export default function Home() {
           <Btn
             main="Sign Up"
             extraStylesBtn="bg-yellow-200 hover:bg-yellow-300 text-gray-900"
+            purpose="signup"
           />
           <Btn
             main="Log In"
             extraStylesBtn="bg-green-200 hover:bg-green-300 text-gray-900"
+            purpose="login"
           />
         </motion.div>
       </Sec>
@@ -76,6 +78,7 @@ export default function Home() {
             listHeadingStyles="font-merriweather text-cyan-300 text-xl md:text-3xl"
             listSpanStyles="font-inter text-cyan-200 text-lg md:text-2xl"
             listParagraphStyles="font-space-grotesk text-cyan-400 text-base md:text-xl"
+            delay={0.3}
           />
           <Li
             heading="Exodus"
@@ -85,6 +88,7 @@ export default function Home() {
             listHeadingStyles="font-merriweather text-teal-300 text-xl md:text-3xl"
             listSpanStyles="font-inter text-teal-200 text-lg md:text-2xl"
             listParagraphStyles="font-space-grotesk text-teal-400 text-base md:text-xl"
+            delay={0.6}
           />
           <Li
             heading="Acts"
@@ -94,6 +98,7 @@ export default function Home() {
             listHeadingStyles="font-merriweather text-red-300 text-xl md:text-3xl"
             listSpanStyles="font-inter text-red-200 text-lg md:text-2xl"
             listParagraphStyles="font-space-grotesk text-red-400 text-base md:text-xl"
+            delay={0.9}
           />
         </Ul>
       </Sec>
@@ -105,64 +110,80 @@ export default function Home() {
             heading="Pass Through the Gates"
             span="Login or Sign Up"
             text="Every story has its keepers, and only those who step forward may listen. To witness the Testaments of Loembathea, you must first enter. Create an account or sign in—only then shall the stories unfold before you. The echoes of the past remain hidden from those who stand outside."
-            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:overflow-hidden xl:shadow-none xl:row-start-1 xl:col-start-1 xl:row-end-4 xl:col-end-8 xl:p-12 xl:border-2 xl:border-cyan-600 xl:rounded-xl"
+            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:w-auto xl:h-auto xl:overflow-hidden xl:shadow-none xl:row-start-1 xl:col-start-1 xl:row-end-4 xl:col-end-8 xl:p-12 xl:border-2 xl:border-cyan-600 xl:rounded-xl"
             listHeadingStyles="font-merriweather font-black text-xl text-gray-900 md:text-3xl xl:text-cyan-300"
             listSpanStyles="font-inter font-thin text-lg text-gray-800 md:text-2xl xl:text-cyan-100"
             listParagraphStyles="font-space-grotesk text-base font-bold text-gray-950 md:text-xl xl:text-cyan-400"
+            delay={0.3}
           />
           <Li
             heading="Wander Through the Testaments"
             span="Read & Explore"
             text="Once inside, the vast chronicle of Loembathea awaits. Your journey begins in the heart of the testament, where words weave worlds, and echoes of storytellers long past whisper their truths. Navigate through the passages of time, uncovering stories that shape the ever-growing saga."
-            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:col-start-7 xl:col-end-13 xl:row-start-1 xl:row-end-4 xl:p-12 xl:border-2 xl:border-rose-600 xl:rounded-xl"
+            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:w-auto xl:h-auto xl:col-start-7 xl:col-end-13 xl:row-start-1 xl:row-end-4 xl:p-12 xl:border-2 xl:border-rose-600 xl:rounded-xl"
             listHeadingStyles="font-merriweather font-black text-xl text-gray-900 md:text-3xl xl:text-rose-300"
             listSpanStyles="font-inter font-thin text-lg text-gray-800 md:text-2xl xl:text-rose-100"
             listParagraphStyles="font-space-grotesk text-base font-bold text-gray-950 md:text-xl xl:text-rose-400"
+            delay={0.6}
           />
           <Li
             heading="Ascend Through the Ranks"
             span="Claim Your Role"
             text="A silent observer or an architect of fate? All who enter begin as listeners, granted the right to read but not to shape. Yet, paths unfold for those who seek more. The stewards of the testament—the Admins and Creators—may bestow roles upon those they deem worthy. Through an unseen network of whispers and wills, your place within the chronicle is chosen."
-            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:col-start-1 xl:col-end-7 xl:row-start-6 xl:row-end-12 xl:p-12 xl:border-2 xl:border-lime-600 xl:rounded-xl"
+            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:w-auto xl:h-auto xl:col-start-1 xl:col-end-7 xl:row-start-6 xl:row-end-12 xl:p-12 xl:border-2 xl:border-lime-600 xl:rounded-xl"
             listHeadingStyles="font-merriweather font-black text-xl text-gray-900 md:text-3xl xl:text-lime-300"
             listSpanStyles="font-inter font-thin text-lg text-gray-800 md:text-2xl xl:text-lime-100"
             listParagraphStyles="font-space-grotesk text-base font-bold text-gray-950 md:text-xl xl:text-lime-400"
+            delay={0.9}
           />
           <Li
             heading="Etch Your Mark"
             span="Create, Modify, Expand"
             text="To hold the quill is to wield power. When the moment arrives, you may carve your own path within the testament. Your role will dictate your reach—some may add their verses, others may alter what was once written, and a few may erase words from time itself. But the story does not end; it only transforms, guided by the hands of those who dare to shape it."
-            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:col-start-6 xl:col-end-13 xl:row-start-7 xl:row-end-12 xl:p-12 xl:border-2 xl:border-amber-600 xl:rounded-xl"
+            listElementStyles="gap-2 p-2 shadow-lg min-h-4/5 md:min-h-3/5 md:max-w-4/5 md:shadow-2xl md:gap-6 md:p-8 xl:w-auto xl:h-auto xl:col-start-6 xl:col-end-13 xl:row-start-7 xl:row-end-12 xl:p-12 xl:border-2 xl:border-amber-600 xl:rounded-xl"
             listHeadingStyles="font-merriweather font-black text-xl text-gray-900 md:text-3xl xl:text-amber-300"
             listSpanStyles="font-inter font-thin text-lg text-gray-800 md:text-2xl xl:text-amber-100"
             listParagraphStyles="font-space-grotesk text-base font-bold text-gray-950 md:text-xl xl:text-amber-400"
+            delay={1.2}
           />
         </Ul>
       </Sec>
       <HomeDivider />
       {/*A call to action - Invitation*/}
       <Sec extraStyles="gap-6 md:gap-12">
-        <p className="w-full font-roboto tracking-wide leading-relaxed text-center text-cyan-300 text-lg md:text-4xl">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 1 }}
+          transition={{ duration: 0.3 }}
+          className="w-full font-roboto tracking-wide leading-relaxed text-center text-cyan-300 text-lg md:text-4xl"
+        >
           The testament is never truly complete, nor its pages ever closed.
           Whether as a silent witness or a bold author, your presence shapes its
           course. Step forward, claim your place among the storytellers, and
           inscribe your voice upon eternity.
-        </p>
+        </motion.p>
         {/*Buttons*/}
-        <div className="w-full flex justify-center items-center gap-8 md:gap-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 1 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          className="w-full flex justify-center items-center gap-8 md:gap-16"
+        >
           <Btn
             main="Join the Story"
             span="(Sign Up)"
             extraStylesBtn="text-sm bg-orange-400 hover:bg-orange-300"
-            extraStylesSpan=""
+            purpose="signup"
           />
           <Btn
             main="Return to the Scrolls"
             span="(Log In)"
             extraStylesBtn="text-sm bg-orange-400 hover:bg-orange-300"
-            extraStylesSpan=""
+            purpose="login"
           />
-        </div>
+        </motion.div>
       </Sec>
       <HomeDivider />
       {/*footer*/}
