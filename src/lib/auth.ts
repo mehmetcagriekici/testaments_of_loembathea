@@ -15,7 +15,7 @@ export async function loginUser(formData: FormData) {
 
   try {
     //post response from the tol_server
-    const res = await fetch("http://localhost:5000/auth/login", {
+    const res = await fetch(`${process.env.NEXT_BASE_SERVER_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -50,11 +50,14 @@ export async function signupUser(formData: FormData) {
 
   try {
     //send data to server
-    const res = await fetch("http://localhost:5000/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password, username }),
-    });
+    const res = await fetch(
+      `${process.env.NEXT_BASE_SERVER_URL}/auth/register`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, username }),
+      }
+    );
 
     //check res
     if (!res.ok) {
